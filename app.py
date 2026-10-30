@@ -30,9 +30,10 @@ CSS = r"""
 :root{--bg:#0A0E1A;--surface:#111827;--surface-2:#161F33;--surface-3:#1C2740;--border:rgba(148,163,184,.14);--border-strong:rgba(148,163,184,.26);--text:#E7EAF3;--muted:#8C98B0;--faint:#5E6A82;--accent:#7C83FF;--accent-2:#38D6F5;--accent-soft:rgba(124,131,255,.14);--good:#34D399;--warn:#FBBF24;--risk:#FB923C;--bad:#F87171;--radius:14px;--grad:linear-gradient(135deg,#7C83FF 0%,#38D6F5 100%);}
 html,body,[class*="css"],.stApp,button,input,textarea,select{font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif!important}
 .stApp{background:radial-gradient(1200px 500px at 85% -10%,rgba(56,214,245,.07),transparent 60%),radial-gradient(900px 500px at 10% -20%,rgba(124,131,255,.10),transparent 60%),var(--bg)}
-[data-testid="stHeader"]{background:transparent}[data-testid="stDecoration"]{display:none}footer{visibility:hidden}
+[data-testid="stHeader"]{background:transparent;pointer-events:none}
+[data-testid="stHeader"] [data-testid="stToolbar"],[data-testid="stHeader"] button,[data-testid="stHeader"] a{pointer-events:auto}[data-testid="stDecoration"]{display:none}footer{visibility:hidden}
 [data-testid="stSidebar"],[data-testid="stSidebarCollapsedControl"]{display:none}
-.block-container{padding-top:1.2rem!important;padding-bottom:3rem!important;max-width:1360px}
+.block-container{padding-top:4.2rem!important;padding-bottom:3rem!important;max-width:1360px}
 [data-testid="stWidgetLabel"] p{font-size:.76rem!important;font-weight:600!important;color:var(--muted)!important;text-transform:uppercase;letter-spacing:.06em}
 [data-testid="stCaptionContainer"]{color:var(--muted)!important}
 [class*="st-key-card-"]{background:linear-gradient(180deg,rgba(22,31,51,.85) 0%,rgba(17,24,39,.85) 100%);border:1px solid var(--border)!important;border-radius:var(--radius);padding:22px 22px 18px;box-shadow:0 1px 0 rgba(255,255,255,.03) inset,0 20px 40px -24px rgba(0,0,0,.6);margin-bottom:6px}
